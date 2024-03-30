@@ -1,0 +1,9 @@
+# netlify.toml
+[build]
+command = "pip install -r requirements.txt && python -m compileall ."
+functions = "functions"
+publish = "_site"
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
